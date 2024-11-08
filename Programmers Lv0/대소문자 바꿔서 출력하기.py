@@ -1,10 +1,8 @@
 str = input()
 return_str = ""
 
-for i in str:
-    if i == i.lower():
-        return_str += i.upper()
-    else:
-        return_str += i.lower()
+for letter in str:
+    str_append = (lambda x: x.lower() if x == x.upper() else x.upper())(letter)
+    return_str += str_append
 
 print(return_str)
